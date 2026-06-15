@@ -44,7 +44,7 @@ and a website deployment.
 
 - **Notebooks** run in Agent Platform **Colab Enterprise** (Application Default Credentials — no keys).
 - **Region:** Model Armor templates in `us-east1`; Gemini via the `global` endpoint; AI Applications
-  in `us-central1`.
+  in `us-east1`.
 - **Project** is resolved at runtime so each notebook is portable across GCP projects.
 
 ## Grading
