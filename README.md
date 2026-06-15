@@ -10,7 +10,7 @@ service, and AI Applications).
 |#|Challenge                                     |Focus                                                            |Status    |File                       |
 |-|----------------------------------------------|-----------------------------------------------------------------|----------|-----------------------------|
 |1|Gemini Prompt Security                        |Secure coding/IT chatbot with Model Armor + Gemini safety filters| Complete|[`challenge1`](./challenge-1-aaron.ipynb)|
-|2|RAG in BigQuery                               |Embeddings + vector search over the Aurora Bay FAQs              |  Complete|[`challenge2`](./challenge-2-aaron.ipynb)|
+|2|RAG in BigQuery                               |Embeddings + vector search over the Aurora Bay FAQs              | Complete|[`challenge2`](./challenge-2-aaron.ipynb)|
 |3|Testing & Evaluation                          |Gemini functions, pytest unit tests, Evaluation API              | Planned |[`challenge3`](./challenge-3-aaron.ipynb)|
 |4|Agents with AI Applications *(bonus)*         |Conversational Agent with Playbook + Data Store                  | Planned |[`challenge4`](./challenge-4-aaron.ipynb)|
 |5|Alaska Dept. of Snow Online Agent *(capstone)*|Production RAG agent deployed to a website                       | Planned |[`challenge5`](./challenge-5-aaron.ipynb)|
@@ -49,6 +49,5 @@ and a website deployment.
 
 ## Grading
 
-Each challenge folder contains its runnable artifact (notebook / agent export / diagram) and a
-short README. Notebooks are committed **with their cell outputs** so results are visible without
+Each challenge contains its runnable artifact (notebook / agent export / diagram). Notebooks are committed **with their cell outputs** so results are visible without
 re-running.
