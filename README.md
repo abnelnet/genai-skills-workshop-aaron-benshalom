@@ -7,9 +7,9 @@ service, and AI Applications).
 
 ## Challenges
 
-|#|Challenge                                     |Focus                                                            |Status    |Folder                       |
+|#|Challenge                                     |Focus                                                            |Status    |File                       |
 |-|----------------------------------------------|-----------------------------------------------------------------|----------|-----------------------------|
-|1|Gemini Prompt Security                        |Secure coding/IT chatbot with Model Armor + Gemini safety filters|✅ Complete|[`challenge1/`](./challenge1)|
+|1|Gemini Prompt Security                        |Secure coding/IT chatbot with Model Armor + Gemini safety filters|✅ Complete|[`challenge1/`](./challenge-1-aaron.ipynb)|
 |2|RAG in BigQuery                               |Embeddings + vector search over the Aurora Bay FAQs              |⬜ Planned |`challenge2/`                |
 |3|Testing & Evaluation                          |Gemini functions, pytest unit tests, Evaluation API              |⬜ Planned |`challenge3/`                |
 |4|Agents with AI Applications *(bonus)*         |Conversational Agent with Playbook + Data Store                  |⬜ Planned |`challenge4/`                |
@@ -20,7 +20,7 @@ service, and AI Applications).
 **Challenge 1 — Gemini Prompt Security.** A coding & IT chatbot on the latest Gemini, with Model
 Armor screening both the user input (`input-prompt-template`) and the model output
 (`output-prompt-template`, including Sensitive Data Protection), plus Gemini’s built-in safety
-filters and response validation. Complete writeup in [`challenge1/README.md`](./challenge1/README.md).
+filters and response validation.
 
 **Challenge 2 — RAG in BigQuery.** Load the Aurora Bay FAQs
 (`gs://labs.roitraining.com/aurora-bay-faqs/aurora-bay-faqs.csv`) into BigQuery, generate
