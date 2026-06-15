@@ -12,7 +12,7 @@ service, and AI Applications).
 |1|Gemini Prompt Security                        |Secure coding/IT chatbot with Model Armor + Gemini safety filters| Complete |[`challenge1`](./challenge-1-aaron.ipynb)|
 |2|RAG in BigQuery                               |Embeddings + vector search over the Aurora Bay FAQs              | Complete |[`challenge2`](./challenge-2-aaron.ipynb)|
 |3|Testing & Evaluation                          |Gemini functions, pytest unit tests, Evaluation API              | Complete |[`challenge3`](./challenge-3-aaron.ipynb)|
-|4|Agents with AI Applications *(bonus)*         |Conversational Agent with Playbook + Data Store                  | Planned |[`challenge4`](./challenge-4-aaron.md)|
+|4|Agents with AI Applications *(bonus)*         |Conversational Agent with Playbook + Data Store                  | Complete |[`challenge4`](./challenge-4/challenge-4-aaron.md)|
 |5|Alaska Dept. of Snow Online Agent *(capstone)*|Production RAG agent deployed to a website                       | Planned |[`challenge5`](./challenge-5/challenge-5-aaron.ipynb)|
 
 ## Summaries
@@ -33,7 +33,7 @@ Information / Emergency Services / Tax Related) and a government social-post gen
 
 **Challenge 4 — Agents with AI Applications (bonus).** An “Aurora Bay Agent” Conversational Agent
 (US-Central1) with a Default Playbook and a Data Store backed by
-`gs://labs.roitraining.com/aurora-bay-faqs`, exported as JSON.
+`gs://labs.roitraining.com/aurora-bay-faqs`
 
 **Challenge 5 — Alaska Dept. of Snow Online Agent (capstone).** A secure, deployed RAG agent over
 `gs://labs.roitraining.com/alaska-dept-of-snow`: backend data store + API, unit tests, evaluation
