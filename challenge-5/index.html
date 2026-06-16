@@ -1,45 +1,114 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Alaska Department of Snow — Assistant</title>
-<style>
-  body{font-family:system-ui,-apple-system,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;color:#15202b}
-  h2{margin-bottom:4px}.sub{color:#5b6b7b;margin-top:0;font-size:14px}
-  .row{display:flex;gap:8px;margin-top:16px}
-  input{flex:1;padding:10px;font-size:16px;border:1px solid #cbd5e0;border-radius:8px}
-  button{padding:10px 16px;font-size:16px;border:0;border-radius:8px;background:#1d6fb8;color:#fff;cursor:pointer}
-  button:disabled{opacity:.5}
-  #log{margin-top:20px}.q{font-weight:600;margin-top:16px}
-  .a{white-space:pre-wrap;background:#f4f6f8;padding:12px;border-radius:8px;margin-top:4px}
-</style>
-</head>
-<body>
-  <h2>Alaska Department of Snow</h2>
-  <p class="sub">Ask about plowing routes, services, and department info. Answers come only from the official FAQs.</p>
-  <div class="row">
-    <input id="q" placeholder="e.g. How are plowing routes prioritized?" onkeydown="if(event.key==='Enter')ask()" />
-    <button id="send" onclick="ask()">Ask</button>
-  </div>
-  <div id="log"></div>
-<script>
-  // After `gcloud run deploy`, paste the service URL here (no trailing slash).
-  const BASE = "REPLACE_WITH_CLOUD_RUN_URL";
-  async function ask(){
-    const input=document.getElementById('q'), btn=document.getElementById('send');
-    const q=input.value.trim(); if(!q) return;
-    const log=document.getElementById('log');
-    log.insertAdjacentHTML('beforeend', `<div class="q"></div><div class="a">…</div>`);
-    log.lastElementChild.previousElementSibling.textContent=q;
-    const a=log.lastElementChild; input.value=''; btn.disabled=true;
-    try{
-      const r=await fetch(BASE+"/ask",{method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({question:q})});
-      const d=await r.json(); a.textContent=d.answer || JSON.stringify(d);
-    }catch(e){ a.textContent='Error: '+e; }
-    btn.disabled=false; input.focus();
-  }
-</script>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Alaska Department of Snow — Assistant</title>
+        <style>
+            body {
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    sans-serif;
+                max-width: 640px;
+                margin: 40px auto;
+                padding: 0 16px;
+                color: #15202b;
+            }
+            h2 {
+                margin-bottom: 4px;
+            }
+            .sub {
+                color: #5b6b7b;
+                margin-top: 0;
+                font-size: 14px;
+            }
+            .row {
+                display: flex;
+                gap: 8px;
+                margin-top: 16px;
+            }
+            input {
+                flex: 1;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #cbd5e0;
+                border-radius: 8px;
+            }
+            button {
+                padding: 10px 16px;
+                font-size: 16px;
+                border: 0;
+                border-radius: 8px;
+                background: #1d6fb8;
+                color: #fff;
+                cursor: pointer;
+            }
+            button:disabled {
+                opacity: 0.5;
+            }
+            #log {
+                margin-top: 20px;
+            }
+            .q {
+                font-weight: 600;
+                margin-top: 16px;
+            }
+            .a {
+                white-space: pre-wrap;
+                background: #f4f6f8;
+                padding: 12px;
+                border-radius: 8px;
+                margin-top: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Alaska Department of Snow</h2>
+        <p class="sub">
+            Ask about plowing routes, services, and department info. Answers
+            come only from the official FAQs.
+        </p>
+        <div class="row">
+            <input
+                id="q"
+                placeholder="e.g. How are plowing routes prioritized?"
+                onkeydown="if (event.key === 'Enter') ask();"
+            />
+            <button id="send" onclick="ask()">Ask</button>
+        </div>
+        <div id="log"></div>
+        <script>
+            // After `gcloud run deploy`, paste the service URL here (no trailing slash).
+            const BASE = "";
+            async function ask() {
+                const input = document.getElementById("q"),
+                    btn = document.getElementById("send");
+                const q = input.value.trim();
+                if (!q) return;
+                const log = document.getElementById("log");
+                log.insertAdjacentHTML(
+                    "beforeend",
+                    `<div class="q"></div><div class="a">…</div>`,
+                );
+                log.lastElementChild.previousElementSibling.textContent = q;
+                const a = log.lastElementChild;
+                input.value = "";
+                btn.disabled = true;
+                try {
+                    const r = await fetch(BASE + "/ask", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ question: q }),
+                    });
+                    const d = await r.json();
+                    a.textContent = d.answer || JSON.stringify(d);
+                } catch (e) {
+                    a.textContent = "Error: " + e;
+                }
+                btn.disabled = false;
+                input.focus();
+            }
+        </script>
+    </body>
 </html>
