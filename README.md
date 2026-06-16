@@ -13,7 +13,7 @@ service, and AI Applications).
 |2|RAG in BigQuery                               |Embeddings + vector search over the Aurora Bay FAQs              | Complete |[`challenge2`](./challenge-2-aaron.ipynb)|
 |3|Testing & Evaluation                          |Gemini functions, pytest unit tests, Evaluation API              | Complete |[`challenge3`](./challenge-3-aaron.ipynb)|
 |4|Agents with AI Applications *(bonus)*         |Conversational Agent with Playbook + Data Store                  | Complete |[`challenge4`](./challenge-4/challenge-4-aaron.md)|
-|5|Alaska Dept. of Snow Online Agent *(capstone)*|Production RAG agent deployed to a website                       | Planned |[`challenge5`](./challenge-5/challenge-5-aaron.ipynb)|
+|5|Alaska Dept. of Snow Online Agent *(capstone)*|Production RAG agent deployed to a website                       | Complete |[`challenge5`](./challenge-5/challenge-5-aaron.ipynb)|
 
 ## Summaries
 
